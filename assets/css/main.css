@@ -8,6 +8,136 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+
+#radios{
+  position:relative;
+  width:50%;
+  right: 0px;
+}
+.radiol{
+  position:absolute;
+  right:1000%;
+}
+.labelo{
+  float:left;
+  width:10%; padding-bottom:10%;
+  margin:0 2.5%;
+  background:rgba(255,255,255,.2);
+  border-radius:50%;
+  cursor:pointer;
+}
+#slidero{
+  position:absolute;
+  left:0%; top:0;
+  width:5%; padding-bottom:5%;
+  margin:2.5% 0 0 5%;
+  background:#fff;
+  transition:transform 1s;
+  border-radius:50%;
+  animation-timing-function: ease-in-out;
+  animation-duration:.3s;
+  animation-fill-mode: forwards;
+  transition: 0.2s left .05s ease-in-out;
+}
+#input1:checked  ~ #slidero{ animation-name: input1; left:0; }
+#input2:checked  ~ #slidero{ animation-name: input2; left:15%; }
+#input3:checked  ~ #slidero{ animation-name: input3; left:30%; }
+#input4:checked  ~ #slidero{ animation-name: input4; left:45%; }
+#input5:checked  ~ #slidero{ animation-name: input5; left:60%; }
+
+@keyframes input1{ 30%, 70% { transform:scale(0.5); } }
+@keyframes input2{ 30%, 70% { transform:scale(0.5); } }
+@keyframes input3{ 30%, 70% { transform:scale(0.5); } }
+@keyframes input4{ 30%, 70% { transform:scale(0.5); } }
+@keyframes input5{ 30%, 70% { transform:scale(0.5); } }
+
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  border-radius: 2px;
+  width: 100%;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lol {
+	vertical-align: middle;
+}
+
+.ripip {
+	margin: 15px;
+	color: white;
+	font-size: 16px;
+}
+
+.damn {
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	margin-left: 0;
+	margin-right: 0;
+}
+#halp {
+}
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  height: 200px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  z-index: 999;
+  height: 171px;
+  padding: 4% 3%;
+  width: 100px;
+  background: #2a2a2a;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 90px;
+  opacity: 0.8;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+
 .stuff {
 	text-align: center;
 }
@@ -2416,7 +2546,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"] {
+	 {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -2430,7 +2560,7 @@
 	}
 
 		input[type="checkbox"] + label,
-		input[type="radio"] + label {
+		 {
 			text-decoration: none;
 			cursor: pointer;
 			display: inline-block;
@@ -2442,7 +2572,7 @@
 		}
 
 			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
+			 {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
 				font-family: FontAwesome;
@@ -2452,7 +2582,7 @@
 			}
 
 			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
+			 {
 				border-radius: 4px;
 				border: solid 1px;
 				content: '';
@@ -2467,7 +2597,7 @@
 			}
 
 		input[type="checkbox"]:checked + label:before,
-		input[type="radio"]:checked + label:before {
+		{
 			content: '\f00c';
 		}
 
@@ -2475,9 +2605,7 @@
 		border-radius: 4px;
 	}
 
-	input[type="radio"] + label:before {
-		border-radius: 100%;
-	}
+	
 
 	::-webkit-input-placeholder {
 		opacity: 1.0;
@@ -2526,7 +2654,7 @@
 	}
 
 	input[type="checkbox"] + label,
-	input[type="radio"] + label {
+	{
 		color: #999999;
 	}
 
@@ -2537,7 +2665,7 @@
 		}
 
 	input[type="checkbox"]:checked + label:before,
-	input[type="radio"]:checked + label:before {
+	 {
 		background-color: #fafafa;
 		border-color: #fafafa;
 		color: #000;
