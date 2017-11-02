@@ -99,9 +99,17 @@
 						
 						<div id = "halp" class="inner">
 							<div id="slider">
-								<a onclick = "rotateLeft()" class="control_next">></a>
-								<a onclick = "rotateRight()" class="control_prev"><</a>
+								<a id = "righta" onclick = "rotateRight()" class="control_next">></a>
+								<a id = "lefta" onclick = "rotateLeft()" class="control_prev"><</a>
 										<ul>
+											<li>
+
+												<div>
+													<img width="300px" height="250px" src="images/datashark.png" alt="" />
+												</div>
+
+
+											</li>
 											<li>
 												
 												<div>
@@ -113,15 +121,21 @@
 											<li><div>
 													<img width = "300px" height = "170px" src="images/TriNet_Logo.jpg" alt="" />
 												</div> </li>
-											
+											<li>
+
+												<div>
+													<img width="200px" height="170px" src="images/pbl.jpg" alt="" />
+												</div>
+
+
+											</li>
 										</ul>
 										
 							</div>
 							
-							<p id = "date" class = "damn">Part-time Software Engineer, Aug 2017 - Current</p>
-							<p id = "desc" class = "ripip"> <b>I develop features for a social network called StartupWind that connects entrepreneurs, investors and advisors from premier
-							schools.</b> </p>
-							<p id = "skills" class = "ripip">Skills: Jade, Node.js, MongoDB</p>
+							<p id = "date" class = "damn"></p>
+							<p id = "desc" class = "ripip"> <b></b> </p>
+							<p id = "skills" class = "ripip"></p>
 							</div>
 
 
@@ -144,16 +158,42 @@
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript">
 				var index = 0;
-				var dates = ["Part-time Software Engineer, Aug 2017 - Current", "Software Intern, May 2017 - Aug 2017"]
-				var desc = ["I develop features for a social network called StartupWind that connects entrepreneurs, investors and advisors from premier schools.", 
-							"I created and deployed a full-stack web application that queries company’s database and delivers analytics on company’s mobile app. It also includes a predictive model for customer churn, using a machine learning technique called decision trees."]
-				var skills = ["Skills: Jade, Node.js, MongoDB", "Skills: Python (Flask), Javascript, Docker/Kubernetes, SQL, HTML/CSS"]
+				var dates = ["Cofounder, Sep 2017 - Current", "Part-time Software Engineer, Aug 2017 - Current", "Software Intern, May 2017 - Aug 2017", "Youth Director of PBL Gaming, Aug 2013 - May 2016"]
+				var desc = ["I'm creating a web platform that allows big data and ML startups to purchase and download user data at an affordable price. It includes an automated query feature, allowing companies to build a query with the use of filters. \n If you want to learn more, check out the stealth mode startup company profile at <a id = 'data' href='https://datasharkofficial.github.io/'><i>here</i></a>",
+							"I develop features for a social network called StartupWind that connects entrepreneurs, investors and advisors from premier schools.", 
+							"I created and deployed a full-stack web application that queries company’s database and delivers analytics on company’s mobile app. It also includes a predictive model for customer churn, using a machine learning technique called decision trees.", 
+							"I developed a desktop application (PBL Vocab Challenge) that tests students’ vocabulary skills in the form of a racing game. It was used by 500+ students in Evergreen School District."]
 				
+				var skills = ["Skills: Python (Flask), Javascript, AWS Elastic Beanstalk, AWS RDS, HTML/CSS", "Skills: Node.js, MongoDB, Jade", "Skills: Python (Flask), Javascript, Docker/Kubernetes, SQL, HTML/CSS, Oracle DB", "Skills: SQL, Unity 3D, C#, MonoDevelop, MySQL"]
+				
+				document.getElementById("date").innerHTML = dates[0];
+				document.getElementById("desc").innerHTML = desc[0];
+				document.getElementById("skills").innerHTML = skills[0];
+				lefta = document.getElementById('lefta');
+					righta = document.getElementById('righta');
+					lefta.style.height = "250px";
+					righta.style.height = "250px";
+
 				function rotateLeft() {
+					
 					index = (index + dates.length - 1) % dates.length;
 					document.getElementById("date").innerHTML = dates[index];
 					document.getElementById("desc").innerHTML = desc[index];
 					document.getElementById("skills").innerHTML = skills[index];
+					console.log(dates.length);
+					console.log(index);
+					
+					if (index == 0) {
+						lefta = document.getElementById('lefta');
+						righta = document.getElementById('righta');
+						lefta.style.height = "250px";
+						righta.style.height = "250px";
+					} else {
+							lefta = document.getElementById('lefta');
+							righta = document.getElementById('righta');
+							lefta.style.height = "170px";
+							righta.style.height = "170px";
+						}
 				}
 
 				function rotateRight() {
@@ -161,6 +201,19 @@
 					document.getElementById("date").innerHTML = dates[index];
 					document.getElementById("desc").innerHTML = desc[index];
 					document.getElementById("skills").innerHTML = skills[index];
+					console.log(dates.length);
+					console.log(index);
+					if (index == 0) {
+							lefta = document.getElementById('lefta');
+							righta = document.getElementById('righta');
+							lefta.style.height = "250px";
+							righta.style.height = "250px";
+						} else {
+							lefta = document.getElementById('lefta');
+							righta = document.getElementById('righta');
+							lefta.style.height = "170px";
+							righta.style.height = "170px";
+						}
 				}
 				jQuery(document).ready(function ($) {
 
