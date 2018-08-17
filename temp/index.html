@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Neelesh Dodda</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header 
+			<header id="header" class="alt">
+				<a href="#menu">Menu</a>
+			</header>
+		-->
+		<!-- Nav 
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav>
+		-->
+		<!-- Banner -->
+			<section id="banner" background = "/images/neel6.jpg">
+				<div class="inner">
+					<header>
+						<h1>Hi, I'm Neelesh.</h1> <br>
+						<p>Welcome to my website!<br/> <br> I'm passionate about big data, cloud technologies <br> and machine learning.</p>
+					</header>
+					<a href="#main" class="button big scrolly">More About Me</a>
+				</div>
+			</section>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper style1">
+						
+						
+						<div class="inner">
+							<div class="centered">
+								<h2>Skills</h2>
+								<p>Have a look at some of my skills! I'm always interested in learning new technologies.</p>
+								<div class="stuff">
+									<ul>
+										<li onmouseover="languages()" onmouseout="defaultImage()">Languages</li>
+										<li onmouseover="databases()" onmouseout="defaultImage()">Databases</li>
+										<li onmouseover="frameworks()" onmouseout="defaultImage()">Frameworks</li>
+										<li onmouseover="other()" onmouseout="defaultImage()">Other</li>
+									</ul>
+								</div>
+								<img id="wordcloud" src="images/default.png">
+							</div>
+							
+								
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section class="wrapper style2">
+						<div class="centered"><h2>Experience</h2></div>
+						
+						<div id = "halp" class="inner">
+							<div id="slider">
+								<a id = "righta" onclick = "rotateRight()" class="control_next">></a>
+								<a id = "lefta" onclick = "rotateLeft()" class="control_prev"><</a>
+										<ul>
+											<li>
+
+												<div>
+													<img width="300px" height="250px" src="images/datashark.png" alt="" />
+												</div>
+
+
+											</li>
+											<li>
+												
+												<div>
+													<img width = "300px" height = "170px" src="images/startupwind.jpg" alt="" />
+												</div> 
+												
+												
+												</li>
+											<li><div>
+													<img width = "300px" height = "170px" src="images/TriNet_Logo.jpg" alt="" />
+												</div> </li>
+											<li>
+
+												<div>
+													<img width="200px" height="170px" src="images/pbl.jpg" alt="" />
+												</div>
+
+
+											</li>
+										</ul>
+										
+							</div>
+							
+							<p id = "date" class = "damn"></p>
+							<p id = "desc" class = "ripip"> <b></b> </p>
+							<p id = "skills" class = "ripip"></p>
+							</div>
+
+
+					</section>
+
+				<!-- Section -->
+					
+
+			</div>
+
+		<!-- Footer -->
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				var index = 0;
+				var dates = ["Cofounder, Sep 2017 - Current", "Part-time Software Engineer, Aug 2017 - Current", "Software Intern, May 2017 - Aug 2017", "Youth Director of PBL Gaming, Aug 2013 - May 2016"]
+				var desc = ["I'm creating a web platform that allows big data and ML startups to purchase and download user data at an affordable price. It includes an automated query feature, allowing companies to build a query with the use of filters. \n If you want to learn more, check out the stealth mode startup company profile at <a id = 'data' href='https://datasharkofficial.github.io/'><i>here</i></a>",
+							"I develop features for a social network called StartupWind that connects entrepreneurs, investors and advisors from premier schools.", 
+							"I created and deployed a full-stack web application that queries company’s database and delivers analytics on company’s mobile app. It also includes a predictive model for customer churn, using a machine learning technique called decision trees.", 
+							"I developed a desktop application (PBL Vocab Challenge) that tests students’ vocabulary skills in the form of a racing game. It was used by 500+ students in Evergreen School District."]
+				
+				var skills = ["Skills: Python (Flask), Javascript, AWS Elastic Beanstalk, AWS RDS, HTML/CSS", "Skills: Node.js, MongoDB, Jade", "Skills: Python (Flask), Javascript, Docker/Kubernetes, SQL, HTML/CSS, Oracle DB", "Skills: SQL, Unity 3D, C#, MonoDevelop, MySQL"]
+
+				var imagesDirectory = "images/"
+				
+				document.getElementById("date").innerHTML = dates[0];
+				document.getElementById("desc").innerHTML = desc[0];
+				document.getElementById("skills").innerHTML = skills[0];
+				lefta = document.getElementById('lefta');
+					righta = document.getElementById('righta');
+					lefta.style.height = "250px";
+					righta.style.height = "250px";
+
+				function defaultImage() {
+					document.getElementById('wordcloud').src = imagesDirectory + "default.png";
+				}
+
+				function languages() {
+					document.getElementById('wordcloud').src = imagesDirectory + "languages.png";
+				}
+
+				function databases() {
+					document.getElementById('wordcloud').src = imagesDirectory + "databases.png";
+				}
+
+				function frameworks() {
+					document.getElementById('wordcloud').src = imagesDirectory + "frameworks.png";
+				}	
+
+				function other() {
+					document.getElementById('wordcloud').src = imagesDirectory + "other.png";
+				}
+
+				function rotateLeft() {
+					
+					index = (index + dates.length - 1) % dates.length;
+					document.getElementById("date").innerHTML = dates[index];
+					document.getElementById("desc").innerHTML = desc[index];
+					document.getElementById("skills").innerHTML = skills[index];
+					console.log(dates.length);
+					console.log(index);
+					
+					if (index == 0) {
+						lefta = document.getElementById('lefta');
+						righta = document.getElementById('righta');
+						lefta.style.height = "250px";
+						righta.style.height = "250px";
+					} else {
+							lefta = document.getElementById('lefta');
+							righta = document.getElementById('righta');
+							lefta.style.height = "170px";
+							righta.style.height = "170px";
+						}
+				}
+
+				function rotateRight() {
+					index = (index + dates.length + 1) % dates.length;
+					document.getElementById("date").innerHTML = dates[index];
+					document.getElementById("desc").innerHTML = desc[index];
+					document.getElementById("skills").innerHTML = skills[index];
+					console.log(dates.length);
+					console.log(index);
+					if (index == 0) {
+							lefta = document.getElementById('lefta');
+							righta = document.getElementById('righta');
+							lefta.style.height = "250px";
+							righta.style.height = "250px";
+						} else {
+							lefta = document.getElementById('lefta');
+							righta = document.getElementById('righta');
+							lefta.style.height = "170px";
+							righta.style.height = "170px";
+						}
+				}
+				jQuery(document).ready(function ($) {
+
+						$('#checkbox').change(function () {
+							setInterval(function () {
+								moveRight();
+							}, 3000);
+						});
+
+						var slideCount = $('#slider ul li').length;
+						var slideWidth = $('#slider ul li').width();
+						var slideHeight = $('#slider ul li').height();
+						var sliderUlWidth = slideCount * slideWidth;
+
+						$('#slider').css({ width: slideWidth, height: slideHeight });
+
+						$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+						$('#slider ul li:last-child').prependTo('#slider ul');
+
+						function moveLeft() {
+							$('#slider ul').animate({
+								left: + slideWidth
+							}, 200, function () {
+								$('#slider ul li:last-child').prependTo('#slider ul');
+								$('#slider ul').css('left', '');
+							});
+						};
+
+						function moveRight() {
+							$('#slider ul').animate({
+								left: - slideWidth
+							}, 200, function () {
+								$('#slider ul li:first-child').appendTo('#slider ul');
+								$('#slider ul').css('left', '');
+							});
+						};
+
+						$('a.control_prev').click(function () {
+							moveLeft();
+						});
+
+						$('a.control_next').click(function () {
+							moveRight();
+						});
+
+					});    
+
+			</script>
+	</body>
+</html>
