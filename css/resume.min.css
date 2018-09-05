@@ -158,10 +158,6 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   transform: translateY(4px);
 }
 
-.stuff {
-	text-align: center;
-}
-
 .centered {
 	text-align: center;
 	width: fill;
