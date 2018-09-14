@@ -225,6 +225,11 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   visibility: visible;
 }
 
+.stuff {
+  width: 1000px;
+}
+
+
 .big {
 	font-size: 20px;
 }
