@@ -284,16 +284,20 @@
         <div class="my-auto">
           <h2 class="mb-5">Contact</h2>
 
-        <form method="POST" action="https://formspree.io/ndodda@berkeley.edu">
-          <input type="email" name="name" class="question" id="mail" required autocomplete="off" />
+        <form target="_blank" method="POST" action="mailto:ndodda@berkeley.edu" enctype="text/plain">
+          <input type="email" name="name" class="question" id="mail" required autocomplete="on" />
           <label for="mail"><span class="q">What's your email address?</span></label>
           <br>
           <br>
-          <input type="text" name="name" class="question" id="msg" required autocomplete="off" />
+          <input type="text" name="name" class="question" id="mail" required autocomplete="on" />
+          <label for="mail"><span class="q">What's your name?</span></label>
+          <br>
+          <br>
+          <input type="text" name="name" class="question" id="msg" required autocomplete="on" />
           <label for="msg"><span class="q">What's your message?</span></label>
           <br>
           <br>
-          <button class="button">Submit</button>
+          <button class="button" onsubmit="redirect()">Submit</button>
         </form>
         <br>
         <br>
@@ -310,7 +314,13 @@
       </section>
 
     </div>
-
+    <script>
+    
+    var redirect = function () {
+      document.location.href = "landing.html"
+    }
+    
+    </script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
